@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+:root {
+    --main-color: #66d6e2;
+    --main-bg: #151d2a;
+    --secondary-bg:#111111;
+    --banner-f-size: 1.5rem;
+    --bold: 700;
+    --light: 300;
+    --main-font: "Josefin Sans", sans-serif;
+    --secondary-font: "Open Sans", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* navbar */
+
+.hamburger-res, .logo-res, .navbar-button-link-res {
+    display:none;
+    margin-left: 1rem;
+}
+
+.hamburger-res {
+    font-size: 2rem;
+    padding:1rem 3rem;
+    cursor: pointer;
+}
+
+.logo-res {
+    margin:0.5rem;
+}
+
+.navbar-button-link-res {
+    margin:1.5rem;
+}
+
+
+#navbar, .logo, .navbar-links, .navbar-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--secondary-bg);
+    color:white;
+    border-radius: 0;
+}
+
+.logo-parent {
+    padding-top:8px;
+    margin-left:5%;
+}
+
+.logo {
+    gap:8px;
+}
+
+.logo img {
+    margin-bottom:10px;
+}
+
+.logo div {
+    margin:5px 5px;
+}
+
+.logo div h3 {
+    font-size: 0.8rem;
+    font-family: var(--main-font);
+    letter-spacing: 2px;
+    font-weight: var(--bold);
+}
+
+.logo div p {
+    font-size:0.5rem;
+    font-family: var(--main-font);
+    font-weight: var(--light);
+    letter-spacing: 8px;
+    line-height:0%;
+}
+
+.navbar-links ul {
+    margin:0;
+    padding:1rem;
+    font-size: 0.8rem;
+}
+
+.navbar-links ul a {
+    text-decoration: none;
+}
+
+.navbar-links ul li {
+    color:#b5b2b2;
+    padding:.2rem 1rem;
+    list-style: none;
+}
+
+button {
+    border:1.5px solid var(--main-color);
+    margin:1rem;
+    background: transparent;
+    color:white;
+    padding:0.25rem 1rem;
+}
+
+button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.navbar-links button {
+    margin:1rem;
+    margin-right:5rem;
+}
+
+/* responsive navbar styling */
+body {
+    position: relative;
+}
+
+ .overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.75);
+    z-index:10;
+    animation: opacity 1s 1 alternate;
+}
+
+.overlay ul{
+    padding-top:5rem;
+    position: fixed;
+}
+
+.overlay ul li {
+    margin:2rem;
+    list-style: none;
+}
+
+.overlay ul a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    font-family: var(--main-font);
+}
+
+@keyframes opacity {
+    from {opacity:0;}
+    to {opacity: 1;}
+  } 
+
+  /* tablet view button */
+  .tabletview-button {
+    display:none;
+  }
+
+
+/* banner */
+.banner-video-container {
+    overflow:hidden;
+    margin:0px;
+    padding:0;
+    position: relative;
+    width:100%;
+    border-radius: 0px;
+}
+
+#bannerVideo {
+    z-index: -1;
+    margin-top:-70px;
+    width: 100%;
+}
+
+.banner-video-text{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    width:300px;
+    height:100px;
+    position: absolute;
+    margin:auto;
+    text-align: center;
+    top:0;
+    left:0; 
+    bottom:0;
+    right:0; 
+    z-index:4;
+}
+
+.banner-video-text img {
+    width:225px;
+    margin:auto;
+}
+
+.banner-video-text button {
+    padding: 0.75rem;
+}
+
+
+/* slider */
+
+.bannerSlider {
+    margin-top:-100px;
+    z-index:2;
+    -webkit-box-shadow: 0px -11px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -11px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -11px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+/* battery-info-banner */
+
+.battery-info-banner {
+    width:100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.battery-info-banner video {
+    width: 100%;
+}
+
+.battery-info-banner img {
+    width:100%;
+}
+
+.video-text2 {
+    width:40%;
+    font-family: var(--main-font);
+    color:white;
+}
+
+.video-text2 img {
+    margin:auto;
+    width:100px;
+}
+
+.play-mobile {
+    display:none;
+}
+
+
+
+
+
+/* smart systems section css */
+
+.smartSecImg1 {
+    width: 260px;
+    grid-area: 'img1';
+}
+
+.smartSecImg2 {
+    width: 270px;
+    grid-area: 'img2';
+}
+
+.smartSecImg3 {
+    width: 260px;
+    grid-area: 'img3';
+}
+
+.info-div-text {
+    grid-area: 'head-text';
+}
+
+.info-div {
+    background-color: var(--main-bg);
+    padding:5rem;
+}
+
+.smart-systems {
+    width:70%;
+    margin:auto;
+    display:grid;
+    grid-template-areas:
+    'head-text head-text head-text'
+    'img1 img2 img3';
+}
+
+.info-div-text {
+    color: white;
+    padding: 3rem;
+    margin:auto;
+    text-align:center;
+}
+
+.info-div-text h3 {
+    font-family: var(--secondary-font);
+    letter-spacing: 5px;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+/* footer banner */
+.footer-banner {
+width:40%; margin:auto;
+}
+
+
+/* media query */
+/* responsiveness for tablet */
+@media only screen and (max-width: 1222px) {
+    .smart-systems {
+        grid-template-areas: 
+        'head-text head-text'
+        'img1 img2';
+    }
+
+    .navbar-links button {
+        display:none;
+    }
+
+    .tabletview-button {
+        width:100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        padding-top:5rem;
+        padding-bottom:1rem;
+        background-color: var(--secondary-bg);
+    }
+ }
+
+ /* mobile view  */
+@media only screen and (max-width: 789px) { 
+    /* navbar  */
+
+    .logo-parent, .navbar-links {
+        display:none;
+    }
+
+    .hamburger-res, .logo-res, .navbar-button-link-res {
+        display: block;
+    }
+
+    .tabletview-button {
+        display: none;
+    }
+
+    /* banner */
+    .banner-video-container {
+        height:400px;
+        margin:0;
+    }
+
+    #bannerVideo {
+        width:180%;
+    }
+
+    .banner-video-text {
+        margin-top:35%;
+    }
+
+    .banner-video-text img {
+        width:100px;
+    }
+
+    .banner-video-text button {
+        width:200px;
+        margin:auto;
+        font-size: 1rem;
+    }
+
+    .info-div {
+        padding:0rem;
+    }
+
+    .smart-systems {
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+    }
+
+    .smart-systems img {
+        margin:1rem auto;
+        width:200px;
+    }
+
+    /*  battery specifications video */
+
+    .battery-info-banner {
+        height:300px;
+    }
+
+    .battery-info-banner video {
+        width:150%;
+    }
+
+    .video-text2 {
+        margin-top:1.5rem;
+        width:100%;
+    }
+    .video-text2 img {
+        width:50px;
+    }
+
+    .play-screen {
+        display:none;
+    }
+
+    .play-mobile {
+        display:block;
+    }
+}
+
